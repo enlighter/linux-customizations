@@ -1,0 +1,3 @@
+pacman -Ss [search-string] | grep installed
+
+An empty search-string lists all installed packages

@@ -1,0 +1,8 @@
+You need to install the following apckages in archlinux to use fedora-liveusb-disk creatoro in Arch-linux based distributions:
+(liveusb included in the third-party folder)
+
+sudo pacman -S base-devel isomd5sum udiskie python2-dbus tar python2 python2-pip python2-pyqt4 syslinux urlgrabber python2-isomd5sum pyparted
+yaourt -S python2-pyparted 
+
+Then to run the libe-usb creator:
+sudo python2 ./liveusb-creator-3.13.2/liveusb-creator
