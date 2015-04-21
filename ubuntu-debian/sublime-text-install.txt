@@ -1,0 +1,6 @@
+http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/getting_started/install.html
+
+(21.04.15)
+For x64 :
+cd ~
+wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3047_amd64.deb
