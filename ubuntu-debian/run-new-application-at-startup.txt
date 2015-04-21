@@ -1,0 +1,9 @@
+adding a .desktop file to /etc/xdg/autostart/
+
+You can do this with the following command
+
+sudo ln -s /usr/share/applications/<application-name>.desktop /etc/xdg/autostart/
+
+e.g.
+sudo ln -s /usr/share/applications/guake.desktop /etc/xdg/autostart/
+sudo ln -s /usr/share/applications/plank.desktop /etc/xdg/autostart/
