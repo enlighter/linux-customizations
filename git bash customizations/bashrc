@@ -25,3 +25,14 @@ alias ls='ls --color=auto'
 # '\W' adds the name of the current directory
 export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
 alias subl="subl3"
+
+
+export PATH=/home/enlighter/torch/install/bin:$PATH  # Added automatically by torch-dist
+export LD_LIBRARY_PATH=/home/enlighter/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
+export DYLD_LIBRARY_PATH=/home/enlighter/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
+
+case $TERM in
+    xterm*)
+        PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD##*/}"'
+        ;;
+esac
