@@ -1,7 +1,7 @@
 #!/bin/python3
 
 # from io import StringIO
-import os
+#import os
 # import sys
 
 # old_stdout = sys.stdout
@@ -12,21 +12,30 @@ import os
 # print(type(gitConfig))
 # print("Screen check")
 
-import sys
-from io import TextIOWrapper, BytesIO
+# import sys
+# from io import TextIOWrapper, BytesIO
 
-# setup the environment
-old_stdout = sys.stdout
-sys.stdout = TextIOWrapper(BytesIO(), sys.stdout.encoding)
+# # setup the environment
+# old_stdout = sys.stdout
+# sys.stdout = TextIOWrapper(BytesIO(), sys.stdout.encoding)
 
-# do something that writes to stdout or stdout.buffer
-os.system("git config --list")
+# # do something that writes to stdout or stdout.buffer
+# os.system("git config --list")
 
-# get output
-sys.stdout.seek(0)      # jump to the start
-out = sys.stdout.read() # read output
+# # get output
+# sys.stdout.seek(0)      # jump to the start
+# out = sys.stdout.read() # read output
 
-# restore stdout
-sys.stdout.close()
-sys.stdout = old_stdout
-print(out)
+# # restore stdout
+# sys.stdout.close()
+# sys.stdout = old_stdout
+# print(out)
+
+import subprocess
+
+# proc = subprocess.Popen(["cat", "/etc/services"], stdout=subprocess.PIPE, shell=True)
+out = subprocess.check_output("git config --list", shell=True).decode()
+# (out, err) = proc.communicate()
+print("program output:", out)
+if 'color.ui' in out:
+	print("found ui")
