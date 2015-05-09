@@ -1,7 +1,7 @@
 #!/bin/python3
 
 # from io import StringIO
-#import os
+import os
 # import sys
 
 # old_stdout = sys.stdout
@@ -34,8 +34,14 @@
 import subprocess
 
 # proc = subprocess.Popen(["cat", "/etc/services"], stdout=subprocess.PIPE, shell=True)
-out = subprocess.check_output("git config --list", shell=True).decode()
+gitConfig = subprocess.check_output("git config --list", shell=True).decode()
 # (out, err) = proc.communicate()
-print("program output:", out)
-if 'color.ui' in out:
-	print("found ui")
+if 'http.proxy' in gitConfig:
+	# proxy is set, have to unset
+	os.system("git config --global --unset http.proxy")
+	os.system("git config --global --unset https.proxy")
+	os.system("git config --list")
+else:
+	os.system("git config --global http.proxy http://10.3.100.207:8080")
+	os.system("git config --global https.proxy http://10.3.100.207:8080")
+	os.system("git config --list")
