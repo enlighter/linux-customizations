@@ -1,0 +1,42 @@
+#
+# ~/.bashrc
+#
+
+# Enable tab completion
+source ~/git-completion.bash
+
+# colors!
+green="\[\033[0;32m\]"
+blue="\[\033[0;34m\]"
+purple="\[\033[0;35m\]"
+reset="\[\033[0m\]"
+
+# Change command prompt
+source ~/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds git-related stuff
+# '\W' adds the name of the current directory
+export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
+alias subl="subl3"
+
+
+export PATH=/home/enlighter/torch/install/bin:$PATH  # Added automatically by torch-dist
+export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH # local ruby path installed manually
+export LD_LIBRARY_PATH=/home/enlighter/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
+export DYLD_LIBRARY_PATH=/home/enlighter/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
+
+case $TERM in
+    xterm*)
+        PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD##*/}"'
+        ;;
+esac
+
+alias pacman="pacmatic"
+alias pacforce="pacman -S --force"
