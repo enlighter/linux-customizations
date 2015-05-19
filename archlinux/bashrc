@@ -40,3 +40,4 @@ esac
 
 alias pacman="pacmatic"
 alias pacforce="pacman -S --force"
+alias octave-gui="octave --force-gui"

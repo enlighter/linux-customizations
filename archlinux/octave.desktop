@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=GNU Octave (high-level numerical computations)
+Comment=Open-source alternative to MATLAB
+Exec=octave --force-gui
+Terminal=false
+Type=Application
+Icon=/usr/share/octave/3.8.2/imagelib/octave-logo.svg
+Categories=Education;Languages;Development;
+StartupNotify=true
+
