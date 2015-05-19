@@ -1,0 +1,8 @@
+To add a new application for autostart in the .xinitrc based pantheon DE,
+just before 'exec cerbere' line in .xinitrc,
+add an eval command with appropriate command for starting the intended application from command-line:
+
+e.g. eval 'guake &'
+      ^      ^
+      |      |
+(eval comm.)(command for starting guake from command-line in background)
