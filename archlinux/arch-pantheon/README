@@ -1,0 +1,7 @@
+- Copy the .xinitrc file present in this folder to the user 'Home' folder of intended
+arch system with pantheon DE installed
+'~/.xinitrc'
+
+- Then log into the appropriate user account at tty login
+- to start the DE 'pantheon' session, execute 'startx' at the command line
+- you will reach the intended desktop environment
