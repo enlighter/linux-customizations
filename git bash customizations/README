@@ -1,0 +1,4 @@
+Rename bashrc to .bashrc and place it in you home folder [\home\<username>]
+bashrc => .bashrc
+
+also place git-completion.bash & git-prompt.sh in your home folder, open a new bash window and enjoy!!
