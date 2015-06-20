@@ -1,0 +1,1 @@
+LD_PRELOAD=libcurl.so.3 ./cgminer --scrypt -o stratum+tcp://global.wemineltc.com:3335 -u enlighter92.sys1 -p 9 --thread-concurrency 6192 -I 9

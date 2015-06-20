@@ -1,0 +1,16 @@
+THIS README VALID AS ON 20.06.2015
+
+Download cgminer version 3.7.2 built from this page : "https://litecointalk.org/index.php?topic=10030.0"
+
+- extract the folder from the downloaded archive, cd into it:
+- copy the 2 .sh files (first-time-setup.sh and mine-litecoins.sh) into this extracted folder
+
+FOR THE FIRST TIME DO THIS:
+sudo ln -s /usr/lib/libncurses.so.5 /usr/lib/libtinfo.so.5
+sudo ln -s /usr/lib/libtinfo.so.5 /usr/lib/libtinfo.so
+
+AND also install libcurl-compat from aur:
+yaourt -S lincurl-compat
+(this first time stup in first-time-setup.sh)
+
+then run the mine-litecoins.sh script.
