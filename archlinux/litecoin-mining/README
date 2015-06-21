@@ -1,4 +1,4 @@
-THIS README VALID AS ON 20.06.2015
+THIS README VALID AS ON 21.06.2015
 
 Download cgminer version 3.7.2 built from this page : "https://litecointalk.org/index.php?topic=10030.0"
 
@@ -14,3 +14,6 @@ yaourt -S lincurl-compat
 (this first time stup in first-time-setup.sh)
 
 then run the mine-litecoins.sh script.
+
+## Hardware used: ATI Radeon HD 6490m switchable graphics
+## System: Archlinux rolling-release, Gnome DE, AMD Catalyst 15.3 compiled, linux-4.0.5-1-ARCH kernel
