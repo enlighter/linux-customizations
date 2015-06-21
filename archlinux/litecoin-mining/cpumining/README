@@ -1,0 +1,6 @@
+https://github.com/CryptoManiac/stratum-mining-proxy
+will be required for startum support, as cpuminer doesn't have stratum support
+
+Add the start_proxy.sh script to the stratum-mining-proxy folder after installing it and then run this script to start the local proxy server
+
+and use the start_mining.sh script in the same folder as the "minerd" execcutable to start mining with wemineltc pool
