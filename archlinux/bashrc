@@ -24,6 +24,7 @@ alias ls='ls --color=auto'
 # '\$(__git_ps1)' adds git-related stuff
 # '\W' adds the name of the current directory
 export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
+export export TSOCKS_PASSWORD=""
 alias subl="subl3"
 
 
@@ -41,3 +42,4 @@ esac
 alias pacman="pacmatic"
 alias pacforce="pacman -S --force"
 alias octave-gui="octave --force-gui"
+alias tsocks="LD_PRELOAD=libtsocks.so tsocks"
