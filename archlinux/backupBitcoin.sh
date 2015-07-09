@@ -1,1 +1,1 @@
-cp -rfv ~/.bitcoin/* /run/media/enlighter/geekout/bitcoin/
+cp -r -u -x -v ~/.bitcoin/* /run/media/enlighter/geekout/bitcoin/
